@@ -15,7 +15,7 @@ class SettingsController {
     
     // MARK: - Internal Properties
     
-    private let mySettings: [Setting]
+    private var mySettings: [Setting]
     
     // MARK: - Computed Properties
     
@@ -25,7 +25,7 @@ class SettingsController {
     
     // MARK: - initalizer
     
-    init(){
+    init() {
         let music = Setting(name: "Music", image: UIImage(named: "music"), isSet: false)
         let apps = Setting(name: "Apps", image: UIImage(named: "app"), isSet: true)
         let books = Setting(name: "Books", image: UIImage(named: "ibooks"), isSet: false)
@@ -33,6 +33,7 @@ class SettingsController {
         
         mySettings = [music, apps, books, updates]
     }
+    
     // MARK: - Internal methods
     func setting(at indexPath: IndexPath) -> Setting {
         return mySettings[indexPath.row]
