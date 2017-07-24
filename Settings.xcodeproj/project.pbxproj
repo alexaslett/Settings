@@ -13,6 +13,8 @@
 		4DD65D7C1F264EFC009B264A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD65D7A1F264EFC009B264A /* LaunchScreen.storyboard */; };
 		4DD65D871F266110009B264A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD65D861F266110009B264A /* Setting.swift */; };
 		4DD65D891F266252009B264A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD65D881F266252009B264A /* SettingsController.swift */; };
+		4DD65D8C1F2668AE009B264A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD65D8B1F2668AE009B264A /* SettingsViewController.swift */; };
+		4DD65D8E1F266BFA009B264A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD65D8D1F266BFA009B264A /* SettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4DD65D7D1F264EFC009B264A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DD65D861F266110009B264A /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		4DD65D881F266252009B264A /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		4DD65D8B1F2668AE009B264A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4DD65D8D1F266BFA009B264A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				4DD65D751F264EFC009B264A /* Main.storyboard */,
+				4DD65D8B1F2668AE009B264A /* SettingsViewController.swift */,
+				4DD65D8D1F266BFA009B264A /* SettingTableViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -173,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DD65D891F266252009B264A /* SettingsController.swift in Sources */,
+				4DD65D8E1F266BFA009B264A /* SettingTableViewCell.swift in Sources */,
 				4DD65D871F266110009B264A /* Setting.swift in Sources */,
 				4DD65D721F264EFC009B264A /* AppDelegate.swift in Sources */,
+				4DD65D8C1F2668AE009B264A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
