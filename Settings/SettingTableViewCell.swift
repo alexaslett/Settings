@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SettingTableViewCellDelegate: class {
+    func settingValueChanged(_ cell: SettingTableViewCell, selected: Bool)
+}
+
 class SettingTableViewCell: UITableViewCell {
 
     // MARK: - IBOutletss
@@ -18,6 +22,10 @@ class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     // Label
     @IBOutlet weak var settingLabel: UILabel!
+    
+    // MARK: - Internal Properties
+    
+    weak var delegate: SettingTableViewCellDelegate?
     
     
     
@@ -34,6 +42,14 @@ class SettingTableViewCell: UITableViewCell {
         // Update the background color
         backgroundColor = setting.isSet ? .yellow : .white
         
+    }
+    
+    // MARK: - Internal method
+    
+    @IBAction func settingSwitchValueChanged() {
+        // When the value changes, we want to update the cell.
+        // Need to actually update the setting data as well.
+        delegate?.settingValueChanged(self, selected: settingSwitch.isOn)
     }
   
 }

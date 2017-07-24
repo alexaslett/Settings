@@ -22,8 +22,25 @@ class SettingsViewController: UITableViewController {
         // find indexPath of what you want to display 
         let setting = SettingsController.shared.setting(at: indexPath)
         cell?.updateViews(with: setting)
-       
+        cell?.delegate = self
+        
         return cell ?? UITableViewCell()
     }
 
+}
+
+//MARK: - SettingTableViewCell delegate
+
+extension SettingsViewController: SettingTableViewCellDelegate {
+    func settingValueChanged(_ cell: SettingTableViewCell, selected: Bool) {
+        // change isSet on settings
+        // Which setting to change?
+        guard let cellIndexPath = tableView.indexPath(for: cell) else { return }
+        let setting = SettingsController.shared.setting(at: cellIndexPath)
+        tableView.beginUpdates()
+        setting.isSet = selected
+        tableView.reloadRows(at: [cellIndexPath], with: .automatic)
+        tableView.endUpdates()
+    }
+    
 }
